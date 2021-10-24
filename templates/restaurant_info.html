@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Restaurant Information</title>
+
+<style>
+  .title{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  }
+  .res_type{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+  font-size: 30px;
+  }
+
+  .res_body{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  hr.type1 {
+  border-top: 1px solid black;
+  border-radius: 5px;
+  }
+
+  hr.type2 {
+  border-top: 1px dashed black;
+  }
+</style>
+
+</head>
+
+<body>
+<div class="title">Here are our restaurants:)</div>
+<div class="container">
+<div class="row res_type">
+  <div class="col-4">
+    Restaurants Name
+  </div>
+  <div class="col-4">
+    Type
+  </div>
+  <div class="col-4">
+    Location
+  </div>
+</div>
+  <hr class="type1">
+      {% for r in restaurants %}
+      <div class="row res_body">
+        <div class="col-4">
+            <p>{{r.name}}</p>
+        </div>
+        <div class="col-4">
+            <p>{{r.type}}</p>
+        </div>
+        <div class="col-4">
+            <p>{{r.location}}</p>
+        </div>
+      </div>
+      <hr class="type2">
+      {% endfor %}
+</div>
+
+</body>
+
+</html>

@@ -29,9 +29,9 @@ class RDBService:
         db_connection = pymysql.connect(
            #**db_info,
             #autocommit=True
-            host='localhost',
-            user='root',
-            password=''
+            host='database-1.cqcjuhcd4k1s.us-east-2.rds.amazonaws.com',
+            user='admin',
+            password='Abc!1234567890'
         )
         return db_connection
 
